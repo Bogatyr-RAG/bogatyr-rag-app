@@ -1,0 +1,23 @@
+@use './custom/themes/index' as themes;
+@use './custom//index';
+@use 'bootstrap/scss/bootstrap' as *;
+
+:root {
+  @include themes.theme-dark;
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--light);
+
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+#q-app {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+}

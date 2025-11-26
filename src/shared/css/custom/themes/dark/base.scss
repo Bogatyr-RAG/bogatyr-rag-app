@@ -1,0 +1,12 @@
+@mixin colors-base-dark {
+  --main: var(--black-1000);
+  --secondary: var(--black-700);
+  --accent: var(--turquoise-1000);
+  --accent-dark: var(--turquoise-500);
+  --light: var(--white-800);
+  --light-gray: var(--white-100);
+  --danger: var(--red-1000);
+  --dark: var(--black-400);
+  --confirm: var(--acid);
+  --info: var(--blue);
+}

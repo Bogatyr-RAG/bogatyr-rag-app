@@ -1,0 +1,7 @@
+@use './private__colors.scss' as private;
+@use './base.scss' as base;
+
+@mixin colors-dark {
+    @include private.private-colors-dark;
+    @include base.colors-base-dark;
+}

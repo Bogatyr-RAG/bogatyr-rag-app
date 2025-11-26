@@ -1,0 +1,5 @@
+@use './dark/' as dark;
+
+@mixin theme-dark {
+    @include dark.colors-dark;
+}
