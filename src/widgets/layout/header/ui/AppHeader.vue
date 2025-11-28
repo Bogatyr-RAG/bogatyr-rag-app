@@ -1,23 +1,40 @@
 <template>
   <div class="app-header">
-    <ModeChooser />
-    <UserProfile />
+    <AppSidebar :navigation-config="navigationConfig" />
+
+    <div class="app-header__right">
+      <ModeChooser />
+      <UserProfile />
+    </div>
+
   </div>
 </template>
 
 <script setup lang="ts">
 import ModeChooser from './ModeChooser.vue'
 import UserProfile from './UserProfile.vue'
+import AppSidebar from '../../sidebar/ui/AppSidebar.vue';
+
+import type { NavigationLinkConfig } from 'src/widgets/layout/sidebar'
+
+interface AppLayoutProps {
+  navigationConfig: NavigationLinkConfig[]
+}
+
+defineProps<AppLayoutProps>()
 </script>
 
 <style scoped lang="scss">
 .app-header {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    padding: 15px;
+  display: flex;
+  height: 100px;
+  padding: 15px;
+  justify-content: space-between;
 
-    justify-content: flex-end;
-    gap: 1rem;
+  &__right {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+  }
 }
 </style>
