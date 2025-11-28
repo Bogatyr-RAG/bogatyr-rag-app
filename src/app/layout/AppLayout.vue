@@ -4,7 +4,7 @@
   <div class="page">
     <AppHeader />
 
-    <div class="page__content">
+    <div class="page__content">      
       <RouterView />
     </div>
   </div>
@@ -13,7 +13,6 @@
 <script setup lang="ts">
 import { AppHeader } from 'src/widgets/layout/header'
 import { AppSidebar } from 'src/widgets/layout/sidebar'
-
 import type { NavigationLinkConfig } from 'src/widgets/layout/sidebar'
 
 interface AppLayoutProps {

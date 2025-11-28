@@ -1,18 +1,13 @@
 <template>
   <div class="mode-chooser">
     <BaseButton class="mode-chooser__btn">
-      Админ-панель
-    </BaseButton>
-
-    <BaseButton class="mode-chooser__btn">
-      <CrosswordIcon class="mode-chooser__icon" />
+      Чат-бот
     </BaseButton>
   </div>
 </template>
 
 <script setup lang="ts">
 import { BaseButton } from 'src/shared/ui'
-import { CrosswordIcon } from 'src/shared/ui/assets/icons'
 
 </script>
 

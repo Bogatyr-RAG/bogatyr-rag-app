@@ -17,7 +17,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100%;
+        
     }
 
     &__title {
@@ -28,6 +28,8 @@
         display: flex;
         align-items: start;
         justify-content: center;
+        flex: 1;
+        width: 100%;
     }
 }
 </style>

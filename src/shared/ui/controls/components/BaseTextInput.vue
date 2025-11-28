@@ -1,5 +1,4 @@
 <template>
-  <div>
     <input
       :id="id"
       v-model="model"
@@ -9,7 +8,6 @@
       :disabled="disabled"
       :name="name"
     />
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -25,6 +23,7 @@ interface SInputPasswordProps {
 withDefaults(defineProps<SInputPasswordProps>(), {
 	id: String(Date.now()),
 	errorMessage: '',
+  disabled: false
 })
 
 const model = defineModel<string>()

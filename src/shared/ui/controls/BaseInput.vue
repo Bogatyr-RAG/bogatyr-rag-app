@@ -21,7 +21,8 @@ interface InputProps {
 withDefaults(defineProps<InputProps>(), {
 	label: '',
 	type: 'text',
-  errorMessage: ''
+  errorMessage: '',
+  disabled: false
 })
 
 const model = defineModel<string | undefined>()
@@ -36,9 +37,6 @@ const model = defineModel<string | undefined>()
       :title="label"
     >{{ label }}</label>
 
-    <div
-      v-if="type === Types.PASSWORD"
-    >
       <BasePasswordInput
         :id="label"
         v-model="model"
@@ -46,10 +44,8 @@ const model = defineModel<string | undefined>()
         :disabled="disabled"
         :error-message="errorMessage"
         :name="name"
+        v-if="type === Types.PASSWORD"
       />
-    </div>
-
-    <div v-else>
       <BaseTextInput
         :id="label"
         v-model="model"
@@ -57,8 +53,9 @@ const model = defineModel<string | undefined>()
         :disabled="disabled"
         :error-message="errorMessage"
         :name="name"
+        v-else
       />
-    </div>
+
   </div>
 
   <div
