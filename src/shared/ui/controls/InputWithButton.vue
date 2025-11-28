@@ -70,6 +70,7 @@ defineExpose({
         width: 100%;
         align-items: center;
         gap: 10px;
+        padding: 10px;
     }
 
     &__input-container {

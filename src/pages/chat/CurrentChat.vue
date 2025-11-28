@@ -26,8 +26,9 @@ const message = ref<string>('')
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100%;
+        height: 75vh;
         position: relative;
+        overflow-x: hidden;
     }
 
     &__messages {

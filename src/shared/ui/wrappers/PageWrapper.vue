@@ -12,12 +12,10 @@
 <style scoped lang="scss">
 .page {
     &__container {
-        padding: 30px;
         gap: 30px;
         display: flex;
         flex-direction: column;
         width: 100%;
-        
     }
 
     &__title {
@@ -30,6 +28,7 @@
         justify-content: center;
         flex: 1;
         width: 100%;
+        overflow-x: hidden;
     }
 }
 </style>
