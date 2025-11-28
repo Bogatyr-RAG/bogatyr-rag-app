@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-layout  >
+    <q-layout>
       <q-header elevated class="bg-primary" >
           <RoundButton @click="leftDrawerOpen = !leftDrawerOpen">
             <SideBar />

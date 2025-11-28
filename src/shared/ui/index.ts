@@ -7,5 +7,6 @@ import RoundButton from './buttons/RoundButton.vue'
 import LearningModel from './loader/LearningModel.vue'
 import RoundSpiner from './loader/RoundSpiner.vue'
 import RequestMessage from './message/RequestMessage.vue'
+import ResponceMessage from './message/ResponceMessage.vue'
 
-export { BaseButton, BaseInput, BaseButtonWithIcon, PageWrapper, InputWithButton, RoundButton, LearningModel, RoundSpiner, RequestMessage }
+export { BaseButton, BaseInput, BaseButtonWithIcon, PageWrapper, InputWithButton, RoundButton, LearningModel, RoundSpiner, RequestMessage, ResponceMessage }

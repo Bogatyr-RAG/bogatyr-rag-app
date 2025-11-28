@@ -2,9 +2,8 @@
     <div class="message__layout">
         <q-chat-message 
             name="Рагослав" 
-            bg-color="blue-grey-10" 
+            bg-color="blue-grey-9" 
             text-color="white"
-            sent
         >
             <template #default>
                 <div class="message-content">
@@ -15,16 +14,13 @@
     </div>
 </template>
 
-
 <script setup lang="ts">
 interface Props {
-    message?: string
-    userName?: string
+
 }
 
 withDefaults(defineProps<Props>(), {
-    message: '',
-    userName: 'вы'
+
 })
 </script>
 

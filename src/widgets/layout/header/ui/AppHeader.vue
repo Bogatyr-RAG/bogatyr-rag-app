@@ -3,7 +3,7 @@
     <AppSidebar :navigation-config="navigationConfig" />
 
     <div class="app-header__right">
-      <ModeChooser />
+      <!-- <ModeChooser /> -->
       <UserProfile />
     </div>
 

@@ -3,7 +3,17 @@
         <template #content>
             <div class="chat-page__layout">
                 <div class="chat-page__messages">
-                    <RequestMessage />
+                    <div class="message-wrapper message-wrapper--request">
+                        <RequestMessage>
+                            Какую подпись выбрать для...
+                        </RequestMessage>
+                    </div>
+                    <div class="message-wrapper message-wrapper--response">
+                        <ResponceMessage>
+                            Вам подойдет одна из следующих подписей:
+                            - ...
+                        </ResponceMessage>
+                    </div>
                 </div>
                 <div class="chat-page__input">
                     <InputWithButton v-model="message" />
@@ -14,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { InputWithButton, PageWrapper, RequestMessage } from 'src/shared/ui'
+import { InputWithButton, PageWrapper, RequestMessage, ResponceMessage } from 'src/shared/ui'
 import { ref } from 'vue';
 
 const message = ref<string>('')
@@ -26,7 +36,7 @@ const message = ref<string>('')
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 75vh;
+        height: 77vh;
         position: relative;
         overflow-x: hidden;
     }
@@ -38,7 +48,7 @@ const message = ref<string>('')
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: end;
+        gap: 20px;
     }
 
     &__input {
@@ -49,6 +59,19 @@ const message = ref<string>('')
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.message-wrapper {
+    width: 100%;
+    display: flex;
+    
+    &--request {
+        justify-content: flex-end;
+    }
+    
+    &--response {
+        justify-content: flex-start;
     }
 }
 </style>
