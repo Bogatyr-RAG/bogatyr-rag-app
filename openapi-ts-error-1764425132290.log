@@ -1,0 +1,5 @@
+Error opening file "/home/ksenia/bogatyr-rag-app/src/shared/api/openapi/specification/model/path.yaml" 
+ENOENT: no such file or directory, open '/home/ksenia/bogatyr-rag-app/src/shared/api/openapi/specification/model/path.yaml'
+ResolverError: Error opening file "/home/ksenia/bogatyr-rag-app/src/shared/api/openapi/specification/model/path.yaml" 
+ENOENT: no such file or directory, open '/home/ksenia/bogatyr-rag-app/src/shared/api/openapi/specification/model/path.yaml'
+    at Object.read (/home/ksenia/bogatyr-rag-app/node_modules/@apidevtools/json-schema-ref-parser/dist/lib/resolvers/file.js:61:19)

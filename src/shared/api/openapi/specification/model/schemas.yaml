@@ -1,0 +1,93 @@
+ModelChat:
+  post:
+    tags:
+      - model
+    summary: Send message to model and get response
+    operationId: chatWithModel
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: './schemas.yaml#/ModelRequestBody'
+    responses:
+      200:
+        description: Successfully received response from model
+        content:
+          application/json:
+            schema:
+              $ref: './schemas.yaml#/ModelResponseBody'
+      default:
+        description: Unexpected error
+    security:
+      - jwt: []
+
+ModelHistory:
+  get:
+    tags:
+      - model
+    summary: Get chat history
+    operationId: getChatHistory
+    parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          minimum: 1
+          default: 1
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 100
+          default: 10
+    responses:
+      200:
+        description: Chat history successfully obtained
+        content:
+          application/json:
+            schema:
+              $ref: './schemas.yaml#/ModelListResponseBody'
+      default:
+        description: Unexpected error
+    security:
+      - jwt: []
+
+ModelMessageId:
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+  get:
+    tags:
+      - model
+    summary: Get specific chat message
+    operationId: getChatMessage
+    responses:
+      200:
+        description: Chat message successfully obtained
+        content:
+          application/json:
+            schema:
+              $ref: './schemas.yaml#/ModelResponseBody'
+      default:
+        description: Unexpected error
+    security:
+      - jwt: []
+  delete:
+    tags:
+      - model
+    summary: Delete chat message
+    operationId: deleteChatMessage
+    responses:
+      203:
+        description: Chat message was successfully deleted
+      default:
+        description: Unexpected error
+    security:
+      - jwt: []

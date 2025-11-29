@@ -13,21 +13,27 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",
-    "postinstall": "quasar prepare"
+    "postinstall": "quasar prepare",
+    "openapi": "openapi-ts"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "@vueuse/core": "^14.0.0",
+    "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
     "i18n": "^0.15.3",
     "pinia": "^3.0.4",
     "quasar": "^2.16.0",
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.5.22",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "openapi": "openapi-ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
+    "@hey-api/client-axios": "^0.2.3",
+    "@hey-api/client-fetch": "^0.4.0",
+    "@hey-api/openapi-ts": "^0.53.7",
     "@quasar/app-vite": "^2.1.0",
     "@stylistic/eslint-plugin": "^5.6.1",
     "@types/node": "^20.5.9",

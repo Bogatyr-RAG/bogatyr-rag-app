@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: BogtyrRag Api
+  version: 0.0.1
+servers:
+  - url: http://localhost:8000/api
+    description: Development server
+tags:
+  - name: model
+    description: AI Model chat operations
+
+paths:
+  /model:
+    $ref: './model/path.yaml#/ModelChat'
+  /model/history:
+    $ref: './model/path.yaml#/ModelHistory'
+  /model/{id}:
+    $ref: './model/path.yaml#/ModelMessageId'
