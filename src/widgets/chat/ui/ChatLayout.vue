@@ -3,7 +3,7 @@
                 <div class="chat-page__messages">
                     <div class="message-wrapper message-wrapper--request">
                         <RequestMessage>
-                            Какую подпись выбрать для...
+                            {{  answer.answer  }}
                         </RequestMessage>
                     </div>
                     <div class="message-wrapper message-wrapper--response">
@@ -14,15 +14,27 @@
                     </div>
                 </div>
                 <div class="chat-page__input">
-                    <InputWithButton v-model="message" />
+                    <InputWithButton v-model="question.question" ref="send-question" @send="sendRequest"/>
                 </div>
             </div>
 </template>
 <script setup lang="ts">
 import { InputWithButton, RequestMessage, ResponceMessage } from 'src/shared/ui'
-import { ref } from 'vue';
+import { toRefs, useTemplateRef } from 'vue';
+import { useAnswerStore } from 'src/entities/answer/model/AnswerStore';
+import { useQuestionStore } from 'src/entities/question/model/QuestionStore';
 
-const message = ref<string>('')
+const questionStore = useQuestionStore()
+const answerStore = useAnswerStore()
+
+const { question } = toRefs(questionStore)
+const { answer } = toRefs(answerStore)
+
+const send = useTemplateRef('send-question')
+
+const sendRequest = () : void => {
+    console.log('Запрос отправляется')
+}   
 </script>
 <style scoped lang="scss">
 .chat-page {

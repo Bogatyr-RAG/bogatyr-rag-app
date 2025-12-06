@@ -47,6 +47,7 @@ const { sendDisabled, inputDisabled, generating, loading } = toRefs(props)
 const emit = defineEmits<Emits>()
 
 const sendRequest = (): void => {
+    console.log('32423')
     emit('send')
 }
 
